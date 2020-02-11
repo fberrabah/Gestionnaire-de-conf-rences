@@ -1,6 +1,6 @@
 # Python3 : Gestionnaire de conférences
 
-Créer un gestionnaire de conférencesen utilisant python3.
+Créer un gestionnaire de conférences en utilisant python3.
 
 # Déroulement 
 
