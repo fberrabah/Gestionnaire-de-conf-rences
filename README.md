@@ -1,6 +1,6 @@
 # Python3 : Gestionnaire de conférences
 
-Créer un <a href="https://fr.wikipedia.org/wiki/Agenda">gestionnaire de conférences</a> en utilisant python3.
+Créer un gestionnaire de conférencesen utilisant python3.
 
 # Déroulement 
 
