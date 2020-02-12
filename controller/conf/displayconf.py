@@ -1,9 +1,10 @@
 from model.connection import *
-
+from controller.conf.gestionconf import *
 
 
 class Gestionconf():
     def menuconf(self):
+
 
         info=""    
         
@@ -17,7 +18,8 @@ class Gestionconf():
                 pass
                 
             if info == "c":  
-                pass
+                ajout = Createconf()
+                ajout.create()
 
             if info == "v":  
                 pass
