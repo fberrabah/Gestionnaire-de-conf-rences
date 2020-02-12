@@ -10,6 +10,7 @@ class Createconf():
         self.hour = None
         self.create_date = None
         self.speak_id = None 
+        self.id = None
 
     def create(self,):
         self.choice.initialize_connection()
@@ -24,3 +25,12 @@ class Createconf():
         self.choice.connection.commit()
         self.choice.close_connection()
         print("La conférence a était enregistré.")
+
+    def delete(self,):
+        """"method for delte user account after connect to bdd"""
+        self.choice.initialize_connection()
+        self.id =  input("Enter l'ID de la conference:")
+        self.choice.cursor.execute("DELETE FROM conf WHERE id = %s;", (self.id,))
+        self.choice.connection.commit()
+        self.choice.close_connection()
+        print("Le conférence a était supprimé.")   

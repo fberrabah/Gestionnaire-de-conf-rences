@@ -15,7 +15,8 @@ class Gestionconf():
             
             info = input("\033[34m\n(v) Pour voir toute les conferences programmées.\n(c) Pour créer une conférence.\n(s) Pour supprimer une conférennce.\n(q) Pour quitter.\nVotre choix :\033[0m").lower()
             if info == "s":
-                pass
+                ajout = Createconf()
+                ajout.delete()
                 
             if info == "c":  
                 ajout = Createconf()
