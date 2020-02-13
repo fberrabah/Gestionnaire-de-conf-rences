@@ -2,7 +2,7 @@ from model.connection import *
 from view.entities import *
 import datetime
 
-class Createconf():
+class Gestionconf():
 
     def __init__(self):
         self.choice = connection()

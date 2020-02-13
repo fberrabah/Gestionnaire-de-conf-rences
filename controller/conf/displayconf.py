@@ -2,7 +2,7 @@ from model.connection import *
 from controller.conf.gestionconf import *
 
 
-class Gestionconf():
+class Displayconf():
     def menuconf(self):
 
 
@@ -15,23 +15,21 @@ class Gestionconf():
             
             info = input("\033[34m\n(v) Pour voir toute les conferences programmées.\n(c) Pour créer une conférence.\n(m) Pour modifier une conférence.\n(s) Pour supprimer une conférennce.\n(q) Pour quitter.\nVotre choix :\033[0m").lower()
             if info == "s":
-                ajout = Createconf()
+                ajout = Gestionconf()
                 ajout.delete()
                 
             if info == "c":  
-                ajout = Createconf()
+                ajout = Gestionconf()
                 ajout.create()
-
+            
             if info == "m":  
-                ajout = Createconf()
+                ajout = Gestionconf()
                 ajout.update_conf()
 
             if info == "v":  
-                ajout = Createconf()
+                ajout = Gestionconf()
                 ajout.show_conf()
                      
-                    
-
             if info == "q":
                 print("A bientôt.")
                     
