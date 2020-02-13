@@ -13,7 +13,7 @@ class Gestionconf():
         print("\033[38m\n----------------------------------------\n\033[0m")
         while info != "q":
             
-            info = input("\033[34m\n(v) Pour voir toute les conferences programmées.\n(c) Pour créer une conférence.\n(s) Pour supprimer une conférennce.\n(q) Pour quitter.\nVotre choix :\033[0m").lower()
+            info = input("\033[34m\n(v) Pour voir toute les conferences programmées.\n(c) Pour créer une conférence.\n(m) Pour modifier une conférence.\n(s) Pour supprimer une conférennce.\n(q) Pour quitter.\nVotre choix :\033[0m").lower()
             if info == "s":
                 ajout = Createconf()
                 ajout.delete()
@@ -22,8 +22,13 @@ class Gestionconf():
                 ajout = Createconf()
                 ajout.create()
 
+            if info == "m":  
+                ajout = Createconf()
+                ajout.update_conf()
+
             if info == "v":  
-                pass
+                ajout = Createconf()
+                ajout.show_conf()
                      
                     
 
