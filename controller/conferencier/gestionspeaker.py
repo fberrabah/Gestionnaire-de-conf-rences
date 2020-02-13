@@ -1,7 +1,7 @@
 from model.connection import *
 from view.hydra import *
 
-class Createspeaker():
+class Gestionspeaker():
 
     def __init__(self):
         self.choice = connection()

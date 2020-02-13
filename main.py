@@ -1,5 +1,5 @@
 from model.connection import *
-from controller.conferencier.speaker import *
+from controller.conferencier.displayspeaker import *
 from controller.conf.displayconf import *
 
 
@@ -15,7 +15,7 @@ if __name__=='__main__':
        
         choix = input("\033[33m\n(s) Pour gerer les conférences.\n(c) Pour gerer les conférenciers.\n(q) Pour quitter.\nVotre choix :\033[0m").lower()
         if choix == "s":          
-            gestionconf = Gestionconf()
+            gestionconf = Displayconf()
             gestionconf.menuconf()
         
         if choix == "c":
