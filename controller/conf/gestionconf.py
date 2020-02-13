@@ -1,4 +1,5 @@
 from model.connection import *
+from model.entities import *
 
 class Createconf():
 
@@ -24,7 +25,7 @@ class Createconf():
                                   "(%s, %s, %s, %s, %s)" ,(self.title, self.resume, self.date , self.hour, self.speak_id))
         self.choice.connection.commit()
         self.choice.close_connection()
-        print("La conférence a était enregistré.")
+        print("La conférence est enregistrée.")
 
     def delete(self,):
         """"method for delte user account after connect to bdd"""
@@ -33,4 +34,23 @@ class Createconf():
         self.choice.cursor.execute("DELETE FROM conf WHERE id = %s;", (self.id,))
         self.choice.connection.commit()
         self.choice.close_connection()
-        print("Le conférence a était supprimé.")   
+        print("Le conférence est supprimée.")   
+
+    def show(self):
+
+        
+        sql="""SELECT * FROM conf, speaker WHERE speaker_id = speak_id  """
+        self.choice.initialize_connection()
+        self.choice.cursor.execute(sql)
+        test = self.choice.cursor.fetchall()
+        self.choice.close_connection()
+        for key, value in enumerate(test):
+            test[key]= Hydra(value)
+        return test
+    
+    def show_conf(self):
+
+        test = self.show()
+        if test :
+            for i in test :
+                print(i)

@@ -23,7 +23,8 @@ class Gestionconf():
                 ajout.create()
 
             if info == "v":  
-                pass
+                ajout = Createconf()
+                ajout.show_conf()
                      
                     
 

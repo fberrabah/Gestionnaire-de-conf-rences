@@ -21,7 +21,7 @@ class Createspeaker():
                                   "(%s, %s, %s, %s)" ,(self.firstname, self.name, self.description , self.job))
         self.choice.connection.commit()
         self.choice.close_connection()
-        print("Le conférencier a était enregistré.")
+        print("Le conférencier est enregistré.")
     
     def delete(self,):
         """"method for delte user account after connect to bdd"""
@@ -30,7 +30,7 @@ class Createspeaker():
         self.choice.cursor.execute("DELETE FROM speaker WHERE speaker_id = %s;", (self.speaker_id,))
         self.choice.connection.commit()
         self.choice.close_connection()
-        print("Le conférencier a était supprimé.")
+        print("Le conférencier est supprimé.")
 
 
     def show(self):
