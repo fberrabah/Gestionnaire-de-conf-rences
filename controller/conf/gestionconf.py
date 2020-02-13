@@ -1,5 +1,5 @@
 from model.connection import *
-from model.entities import *
+from view.entities import *
 import datetime
 
 class Createconf():

@@ -1,5 +1,5 @@
 from model.connection import *
-from controller.conferencier.speaker import *1
+from controller.conferencier.speaker import *
 from controller.conf.displayconf import *
 
 
