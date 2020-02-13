@@ -32,16 +32,16 @@ class Createconf():
     def delete(self,):
         """"method for delte user account after connect to bdd"""
         self.choice.initialize_connection()
-        self.id =  input("Enter l'ID de la conference:")
+        self.id =  input("Entrer l'ID de la conférence:")
         self.choice.cursor.execute("DELETE FROM conf WHERE id = %s;", (self.id,))
         self.choice.connection.commit()
         self.choice.close_connection()
-        print("Le conférence est supprimée.")   
+        print("La conférence est supprimée.")   
 
     def show(self):
 
         
-        sql="""SELECT * FROM conf, speaker WHERE speaker_id = speak_id  """
+        sql="""SELECT * FROM conf, speaker WHERE speaker.speaker_id = conf.speak_id ORDER BY date """
         self.choice.initialize_connection()
         self.choice.cursor.execute(sql)
         test = self.choice.cursor.fetchall()
@@ -56,3 +56,16 @@ class Createconf():
         if test :
             for i in test :
                 print(i)
+
+    def update_conf(self):
+        """"method for delte user account after connect to bdd"""
+        column = ""
+        while column not in ['title','resume', 'date', 'hour', 'speak_id']:
+            self.id = input("\033[32mEntrer l'ID de la conférence :\033[0m")
+            column = input("\033[35mQuelle information voulez vous modifier \n title, resume, date, hour, speak_id :\033[0m")
+            datta = input("\033[35mEntrer la nouvelle information:\033[0m")
+            self.choice.initialize_connection()
+            self.choice.cursor.execute("UPDATE conf set " + column + " = %s WHERE id = %s ;", (datta, self.id))
+            self.choice.connection.commit()
+            self.choice.close_connection()
+            print("Information enregistrée")

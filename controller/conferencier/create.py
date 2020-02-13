@@ -50,3 +50,15 @@ class Createspeaker():
         if test :
             for i in test :
                 print(i)
+
+    def update_speaker(self):
+        """"method for delte user account after connect to bdd"""
+        column = ""
+        while column not in ['speaker_id','firstname', 'name', 'description', 'job']:
+            self.speaker_id = input("\033[32mEntrer l'ID du conférencier :\033[0m")
+            column = input("\033[35mQuelle information voulez vous modifier \n firstname, name, description, job :\033[0m")
+            datta = input("\033[35mEntrer la nouvelle information:\033[0m")
+            self.choice.initialize_connection()
+            self.choice.cursor.execute("UPDATE speaker set " + column + " = %s WHERE speaker_id = %s ;", (datta, self.speaker_id))
+            self.choice.connection.commit()
+            self.choice.close_connection()
