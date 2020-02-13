@@ -18,8 +18,8 @@ class Createconf():
         self.choice.initialize_connection()
         self.title= input("Entrer un titre:").lower()
         self.resume = input("Entrer un résumé :").lower()
-        self.date = input("Entrer une date :")
-        self.hour = input("Entrer une heur :")
+        self.date = input("Entrer une date format aaaa-mm-dd :")
+        self.hour = input("Entrer une heur format hh:mm :")
         self.speak_id = input("Entrer l'ID du conférencier :")
         actual_date = datetime.datetime.today()
         
