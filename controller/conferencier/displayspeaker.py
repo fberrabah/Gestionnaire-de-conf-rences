@@ -1,7 +1,7 @@
 from model.connection import *
 from controller.conferencier.gestionspeaker import *
 
-class Gestionpeaker():
+class Displayspeaker():
     def menu(self):
 
         info=""    

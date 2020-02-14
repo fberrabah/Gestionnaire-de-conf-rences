@@ -19,7 +19,7 @@ if __name__=='__main__':
             gestionconf.menuconf()
         
         if choix == "c":
-            gestionspeaker = Gestionpeaker()    
+            gestionspeaker = Displayspeaker()    
             gestionspeaker.menu()   
 
 
