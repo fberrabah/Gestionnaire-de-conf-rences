@@ -68,4 +68,4 @@ class Gestionconf():
             self.choice.cursor.execute("UPDATE conf set " + column + " = %s WHERE id = %s ;", (datta, self.id))
             self.choice.connection.commit()
             self.choice.close_connection()
-            print("Information enregistrée")
+            print("Modification enregistrée")
