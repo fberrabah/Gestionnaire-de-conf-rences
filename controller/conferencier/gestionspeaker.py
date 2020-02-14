@@ -62,4 +62,4 @@ class Gestionspeaker():
             self.choice.cursor.execute("UPDATE speaker set " + column + " = %s WHERE speaker_id = %s ;", (datta, self.speaker_id))
             self.choice.connection.commit()
             self.choice.close_connection()
-            print("Information enregistrée")
+            print("Modification enregistrée")
